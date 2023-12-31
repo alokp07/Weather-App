@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</head>
+<body class="bg-dark vh-100">
+    <div class="container-fluid root vh-100 w-100">
+
+        <div class="row w-100 d-flex justify-content-center root-row">
+
+            <div class="col-lg-3 first">
+                <div class="glass h-100 w-100" style="color: white;">
+                    <div class="d-flex align-items-center justify-content-end m-3 ani">
+                        <input type="text" name="" id="input" class="rounded">
+                        <button onclick="search()" id="searchbutton">
+                            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                        </button>
+                   </div>
+                   <div class="mx-4" id="weathericon">
+                    <h2><img src="./Res/transparent-weather-11.png" width="15%" alt=""></h2>
+                   </div>
+                   <div class="mx-3">
+                    <h1 style="font-size: 70px;" id="temp"></h1>
+                   </div>
+                  <div style="padding-top: 6%; padding-left: 5%;">
+                       <div id="wdes">
+                        
+                       </div>
+                       <hr class="p-0">
+                       <div class="mt-2">
+                            <p id="location">
+                                
+                            </p>
+                       </div>
+                       <div>
+                        <p class="mt-2" id="time">
+    
+                        </p>
+                       </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 first">
+                <div class="glass h-100 w-100">
+                    <div class="row h-100 w-100">
+
+                        <div class="col-lg-6 col-12 d-flex align-items-center fourcolumn">
+                            
+                            <div class="row h-75 w-100">
+                                <div class="col-lg-6 smallbg">
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h5 class="head a">Humidity</h5>
+                                     </div>
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h1 id="humidity" class="head fs-2">0<h1>
+                                     </div>
+                                </div>
+
+                                <div class="col-lg-6 smallbg">
+                                     <div class="row h-100 w-100 m-0 smallboxes">
+                                         <h1 class="head2"><i class="fa-solid fa-droplet fa-1x"></i></h1>
+                                     </div>
+                                 </div>
+                             </div>
+
+                        </div>
+
+                        <div class="col-lg-6 col-12 d-flex align-items-center fourcolumn">
+                            
+                            <div class="row h-75 w-100">
+                                <div class="col-lg-6 smallbg">
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h5 class="head">Visibility</h5>
+                                     </div>
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h1 id="visibility" class="head fs-2">0<h1>
+                                     </div>
+                                </div>
+
+                                <div class="col-lg-6 smallbg">
+                                     <div class="row h-100 w-100 m-0 smallboxes">
+                                         <h1 class="head2"><i class="fa-solid fa-eye-slash"></i></h1>
+                                     </div>
+                                 </div>
+                             </div>
+
+                        </div>
+
+                        <div class="col-lg-6 col-12 d-flex align-items-center fourcolumn">
+                            
+                            <div class="row h-75 w-100">
+                                <div class="col-lg-6 col-12 smallbg">
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h5 class="head">Feels like</h5>
+                                     </div>
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h1 id="feelslike" class="head fs-2">0<h1>
+                                     </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12 smallbg">
+                                     <div class="row h-100 w-100 m-0 smallboxes">
+                                         <h1 class="head2"><i class="fa-solid fa-temperature-three-quarters"></i></h1>
+                                     </div>
+                                 </div>
+                             </div>
+
+                        </div>
+
+                        <div class="col-lg-6 col-12 d-flex align-items-center fourcolumn">
+                            
+                            <div class="row h-75 w-100">
+                                <div class="col-lg-6 col-12 smallbg">
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h5 class="head">Pressure</h5>
+                                     </div>
+                                     <div class="row w-100 m-0 smallboxes">
+                                         <h1 id="pressure" class="head fs-3 ">0<h1>
+                                     </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12 smallbg">
+                                     <div class="row h-100 w-100 m-0 smallboxes">
+                                         <h1 class="head2"><i class="fa-solid fa-thermometer"></i></h1>
+                                     </div>
+                                 </div>
+                             </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+@media(max-width:1300px)
+{
+
+    .head
+    {
+        font-size: 100%;
+    }
+    .fourcolumn
+    {
+        padding: 10px;
+    }
+}
+
+@media(max-width:994px)
+{
+    .root
+    {
+        overflow: scroll;       
+    }
+    .head2
+    {
+        display: none;
+    }
+}
+
+*
+{
+    margin: 0 !important;
+}
+
+.root
+{
+    background: url('./Res/elliott-engelmann-DjlKxYFJlTc-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 8%;
+}
+
+
+.root-row
+{
+    height: 60%;
+}
+
+input
+{
+    background-color: transparent;
+    padding: 2%;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.311);
+    color: white;
+    width: 0%;
+    transition: all 1s;
+    visibility: hidden;
+}
+
+.ani:hover input
+{
+    visibility: visible;
+    width: 90%;
+}
+
+#searchbutton
+{
+    background-color: rgba(0, 0, 0, 0.311);
+    color: white;
+    border: 0;
+    border-radius: 100%;
+    padding: 2%;
+}
+
+.ani:hover #searchbutton
+{
+    animation: rotate 1s;
+    color: orange;
+}
+
+@keyframes rotate
+{
+    50%{ transform: rotate(360deg);}
+}
+
+.glass
+{
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.smallboxes
+{
+    display: flex;
+    align-items: center;
+}
+
+.smallbg
+{
+    background-color: rgba(0, 0, 0, 0.305);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.head
+{
+    color: white;
+    transition: .5s;
+}
+
+.head:hover
+{
+    color: orange;
+}
+
+.head2
+{
+    color: white;
+    transition: 0.5s;
+}
+
+.head2:hover
+{
+    color: orange;
+}
